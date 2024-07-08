@@ -1,0 +1,87 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.core.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:padding="20dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        android:padding="16dp"
+        android:background="@color/background_color">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginBottom="16dp">
+
+            <Button
+                android:id="@+id/btnLogout"
+                android:layout_width="124dp"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="8dp"
+                android:backgroundTint="@color/button_color"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="Cerrar Sesion"
+                android:textColor="@color/white" />
+
+            <Button
+                android:id="@+id/btnInsertRestaurant"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginStart="8dp"
+                android:backgroundTint="@color/button_color"
+                android:paddingHorizontal="16dp"
+                android:paddingVertical="8dp"
+                android:text="Insertar Restaurante"
+                android:textColor="@color/white" />
+
+        </LinearLayout>
+
+        <EditText
+            android:id="@+id/txtvCityFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="City"
+            android:inputType="text"
+            android:backgroundTint="@color/edittext_color"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/txtvDateFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="Date (YYYY-MM-DD)"
+            android:inputType="date"
+            android:backgroundTint="@color/edittext_color"
+            android:padding="10dp" />
+
+        <EditText
+            android:id="@+id/txtvTimeFilter"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="16dp"
+            android:ems="10"
+            android:hint="Time (HH:MM)"
+            android:inputType="time"
+            android:backgroundTint="@color/edittext_color"
+            android:padding="10dp" />
+
+        <androidx.recyclerview.widget.RecyclerView
+            android:id="@+id/recycler_view_restaurants"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:background="@color/recyclerview_background" />
+
+    </LinearLayout>
+
+</androidx.core.widget.NestedScrollView>
